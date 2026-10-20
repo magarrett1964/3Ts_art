@@ -1,0 +1,29 @@
+:root{--bg:#f6f4ef;--fg:#1d1d1b;--muted:#6b6a65;--line:#dedad1;--accent:#1f5fa8;--card:#fffdf8}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe6;--muted:#9c9a92;--line:#2c2b28;--accent:#7fb0ea;--card:#1c1b19}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+header.site{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+header.site .name{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.02em;margin:0;font-weight:normal}
+header.site .name a{text-decoration:none}
+header.site p{margin:.4rem 0 0;color:var(--muted);font-style:italic}
+.small header.site{padding:24px 0 18px}
+.small header.site .name{font-size:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:36px 28px;padding:40px 0 64px}
+@media (max-width:420px){.grid{grid-template-columns:1fr}}
+.grid a{text-decoration:none;display:block}
+.grid figure{margin:0}
+.grid img{width:100%;height:auto;display:block;background:var(--line);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .25s ease,box-shadow .25s ease}
+.grid a:hover img,.grid a:focus img{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.grid figcaption{margin-top:12px;font-size:1rem}
+.grid figcaption span{display:block;color:var(--muted);font-size:.85rem;font-family:system-ui,-apple-system,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.piece{padding:28px 0 56px}
+.piece img{width:100%;height:auto;display:block;box-shadow:0 2px 14px rgba(0,0,0,.18)}
+.piece h1{font-weight:normal;font-size:clamp(1.6rem,4vw,2.4rem);margin:28px 0 4px}
+.piece .meta{color:var(--muted);font-family:system-ui,-apple-system,sans-serif;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px}
+.piece .desc{max-width:42em}
+nav.pager{display:flex;justify-content:space-between;gap:16px;margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-family:system-ui,-apple-system,sans-serif;font-size:.95rem}
+nav.pager a{text-decoration:none;color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.9rem}
